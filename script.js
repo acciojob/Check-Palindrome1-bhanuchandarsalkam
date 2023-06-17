@@ -1,12 +1,12 @@
 // complete the given function
 
 function palindrome(str){
-let newstr=str.split(" ").join();
-	let str2=newstr.split("").reverse().join();
-	if(newstr===str2)
-	{
-		return true;
-	}
-	return false;
+	 var cleaned = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+
+    // reverse the cleaned string
+    var reversed = cleaned.split('').reverse().join('');
+
+    // compare the cleaned string with the reversed string
+    return cleaned === reversed;
 }
 module.exports = palindrome
